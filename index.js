@@ -6,11 +6,15 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 
 
-const app= express();
+const index= express();
 
 const port = 3000;
 
-app.listen(port, () =>{
+index.get('/', (req, res) =>{
+    res.send('Invalid Endpoint');
+});
+
+index.listen(port, () => {
     console.log('Server started on port ' + port);
 });
 
